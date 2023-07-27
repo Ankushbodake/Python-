@@ -1,4 +1,9 @@
-a=[1,2,3,4,5,6,7,89]
-t=list(filter(lambda x: (x%2==0),a))
-print(t)
+from flask import Flask
+app=Flask(__name__)
 
+@app.route('/')
+def hellow_word():
+    return ' hellow,word!'
+
+if __name__==__main__:
+    app.run(debug=True)
